@@ -1,0 +1,453 @@
+WEBVTT
+
+0
+00:00.760 --> 00:05.080
+I'm now going to give you two more example problems of computing.
+
+1
+00:05.080 --> 00:09.310
+eigendecomposition of matrices by hand.
+
+2
+00:09.310 --> 00:14.860
+Obviously this is on the computer but I encourage you to do these problems by hand and they're not done
+
+3
+00:14.860 --> 00:15.520
+in Matlab.
+
+4
+00:15.520 --> 00:19.270
+So I guess that's what it means by hand.
+
+5
+00:19.270 --> 00:20.530
+So let's get started.
+
+6
+00:20.560 --> 00:28.030
+Here is a two by two matrix and you should pause the video go through find the eigenvalues and the eigenvectors
+
+7
+00:28.060 --> 00:37.120
+of this matrix so the way we start is by shifting the matrix by Lambda so subtracting lambda from the
+
+8
+00:37.120 --> 00:44.260
+diagonal elements setting the determinant equal to zero and then proceeding to compute the determinant
+
+9
+00:44.290 --> 00:48.820
+which is also called the characteristic equation of this matrix.
+
+10
+00:48.850 --> 00:57.730
+So that works out to be three minus lambda times six minus lambda minus four equals zero and then expanding
+
+11
+00:57.760 --> 01:04.600
+these two terms multiplying out these two terms and then collecting the like terms gives us lambda squared
+
+12
+01:04.960 --> 01:13.930
+minus nine lambda plus fourteen equals zero and then this expression here can be factored into lambda
+
+13
+01:14.020 --> 01:22.150
+minus seven and Lambda minus two and now it's pretty easy to see that the two lambdas that will solve
+
+14
+01:22.150 --> 01:24.280
+this equation that solve this equation.
+
+15
+01:24.280 --> 01:30.910
+In other words the two eigenvalues of this matrix are plus 7 and plus two.
+
+16
+01:30.910 --> 01:37.180
+So that was step one we found the eigenvalues of this matrix and now we go through for each of these
+
+17
+01:37.180 --> 01:45.160
+eigenvalues shift the matrix by that amount by that value and then figure out what is a vector in the
+
+18
+01:45.280 --> 01:48.410
+shifted matrices null space.
+
+19
+01:48.630 --> 01:50.530
+OK so let's start with 2.
+
+20
+01:50.580 --> 01:53.610
+So this gives us the matrix 1 1 4 4.
+
+21
+01:53.610 --> 02:00.360
+And now we want to find the missing vector here and you've probably guessed it already it is 1 minus
+
+22
+02:00.360 --> 02:01.470
+1.
+
+23
+02:01.590 --> 02:09.330
+And of course you know that also acceptable would be minus 1 1 or minus quadrillion plus quadrillion.
+
+24
+02:09.570 --> 02:17.130
+This vector simply identifies a subspace for the null space of this shifted matrix in any vector that's
+
+25
+02:17.250 --> 02:23.520
+in that null space is perfectly fine as an eigenvector.
+
+26
+02:23.520 --> 02:31.860
+Now that said the best choice for an eigenvector would be a vector that has a norm of 1 a magnitude
+
+27
+02:31.860 --> 02:32.710
+of 1.
+
+28
+02:32.940 --> 02:39.270
+And the second best choice would be integer values that are easy to interpret and compact to write like
+
+29
+02:39.270 --> 02:40.230
+this.
+
+30
+02:40.230 --> 02:40.500
+All right.
+
+31
+02:40.520 --> 02:41.730
+So this was for two.
+
+32
+02:41.730 --> 02:49.350
+Now we go to the second eigenvalues which was seven and that gives us this matrix minus 4 1 and 4 minus
+
+33
+02:49.350 --> 02:50.300
+1.
+
+34
+02:50.370 --> 02:57.210
+And here a vector that could work as an eigenvector as a basis for the null space of this shifted matrix
+
+35
+02:57.300 --> 02:59.790
+is the numbers 1 4.
+
+36
+02:59.820 --> 03:06.690
+So here is the big picture overview we have this matrix and here you see the eigenvalue and its corresponding
+
+37
+03:06.690 --> 03:12.010
+eigenvector and the other eigenvalue and the other corresponding eigenvector.
+
+38
+03:12.060 --> 03:14.080
+Now your results will be correct.
+
+39
+03:14.190 --> 03:21.960
+If you have the correct pairing of eigenvalue and any multiple any scaled version of this vector; it
+
+40
+03:21.960 --> 03:28.860
+doesn't matter if you call this lambda one and this V one that's fine because there's no intrinsic ordering.
+
+41
+03:28.860 --> 03:32.250
+What matters is that you have the pairing correct.
+
+42
+03:32.250 --> 03:32.470
+All right.
+
+43
+03:32.490 --> 03:34.310
+So that was the two by two case.
+
+44
+03:34.380 --> 03:37.080
+Now let's go for a three by three case.
+
+45
+03:37.080 --> 03:40.160
+This one is a little bit more challenging and I have to admit.
+
+46
+03:40.200 --> 03:45.660
+So I first came up with these numbers and then I started computing the eigendecomposition.
+
+47
+03:45.660 --> 03:50.480
+Now I have to admit that I got stuck on one of the eigenvectors.
+
+48
+03:50.670 --> 03:52.400
+I couldn't quite figure it out on my own.
+
+49
+03:52.430 --> 03:54.390
+So I used Matlab to compute that
+
+50
+03:54.390 --> 03:55.200
+eigenvector.
+
+51
+03:55.500 --> 04:04.490
+So what I encourage you to do is find all three eigenvalues by hand and I think it will be pretty obvious
+
+52
+04:04.490 --> 04:08.390
+when you start working through it which is the difficult eigenvalue.
+
+53
+04:08.390 --> 04:15.530
+So then what you should do by hand is find two of the eigenvectors that you can get basically just by
+
+54
+04:15.800 --> 04:18.920
+kind of eyeballing and making some educated guesses.
+
+55
+04:18.920 --> 04:24.860
+And then the third eigenvector you can use a computer to solve or you can just wait and watch me come
+
+56
+04:24.860 --> 04:26.660
+up with a solution.
+
+57
+04:26.850 --> 04:27.090
+All right.
+
+58
+04:27.120 --> 04:34.590
+So again we start by shifting this matrix by minus lambda setting the determinant equal to zero and
+
+59
+04:34.590 --> 04:40.770
+then proceeding to compute the determinant of this equation and altogether that gives us the characteristic
+
+60
+04:40.830 --> 04:43.560
+equation of this matrix.
+
+61
+04:43.560 --> 04:45.270
+Now this is a little bit longer.
+
+62
+04:45.270 --> 04:50.820
+It's a little bit trickier the arithmetic gets a little bit hairy in particular you end up with this
+
+63
+04:50.910 --> 04:59.240
+minus lambda cubed term as well as a couple of multiple terms with Lambda and Lambda squared.
+
+64
+04:59.250 --> 05:05.490
+Now once you collect all of these like terms you'll end up with an expression that looks like this.
+
+65
+05:05.520 --> 05:15.240
+So it should be minus lambda cubed plus 10 times lambda squared plus eleven lambda equals zero Now something
+
+66
+05:15.270 --> 05:22.030
+interesting has happened here all of these terms have a lambda attached to them which means that we
+
+67
+05:22.030 --> 05:29.950
+can take a lambda out of each of these terms and rewrite this expression as minus lambda times.
+
+68
+05:29.980 --> 05:36.160
+All of this stuff and immediately that tells us that lambda equals zero is a solution.
+
+69
+05:36.160 --> 05:43.030
+So when you set this lambda to be zero it doesn't actually matter what's inside this parenthetical statement
+
+70
+05:43.360 --> 05:47.390
+that's immediately going to set to make this equation true.
+
+71
+05:47.440 --> 05:55.300
+That means that one of the eigenvalues of this matrix is zero and I'm going to have an entire video
+
+72
+05:55.330 --> 05:59.140
+just about this phenomenon a little bit later in this section.
+
+73
+05:59.140 --> 06:03.550
+But essentially when an eigenvector is an eigenvalue is zero.
+
+74
+06:03.730 --> 06:10.360
+It means that the matrix is singular and that you can actually see by looking at this matrix and you
+
+75
+06:10.360 --> 06:19.080
+see that column 1 plus column 2 equals column 3 so whenever you have a singular matrix at least one
+
+76
+06:19.140 --> 06:22.110
+eigenvalues value is going to be equal to zero.
+
+77
+06:22.170 --> 06:30.450
+And in fact the number of eigenvalues that are equal to zero tells you about the rank of this matrix.
+
+78
+06:30.490 --> 06:33.870
+More on that in the later video.
+
+79
+06:33.880 --> 06:39.160
+Now once you've gotten to this step you can further factor this equation and you end up with the result
+
+80
+06:39.160 --> 06:44.360
+that lambda equals zero lambda equals minus 1 and Lambda equals eleven.
+
+81
+06:44.590 --> 06:50.110
+So you can probably guess that this is going to be the tricky I can value to compute the corresponding
+
+82
+06:50.110 --> 06:55.600
+I can vector of and this is the one that I got a little bit stuck with.
+
+83
+06:55.600 --> 06:57.490
+And so I used Matlab as a crutch.
+
+84
+06:57.490 --> 06:58.540
+I cheated a little bit.
+
+85
+06:59.250 --> 07:01.500
+OK so but let's go through all of these.
+
+86
+07:01.840 --> 07:07.840
+So we start with zero and now this is kind of a funny thing because we are shifting the matrix by zero
+
+87
+07:08.200 --> 07:10.970
+which actually means we're not changing the matrix at all.
+
+88
+07:11.140 --> 07:21.000
+And that means that this matrix A already has a non-trivial null space even without doing any shifting.
+
+89
+07:21.130 --> 07:28.010
+So this problem actually boils down to finding a vector in the null space or a basis for the null space.
+
+90
+07:28.270 --> 07:35.380
+Even without doing any shifting so based on what I just told you about how do I set up this matrix that
+
+91
+07:35.660 --> 07:42.950
+column one plus column two equals column three a basis for the null space is 1 one minus 1.
+
+92
+07:42.970 --> 07:49.130
+So you can try for each of these rows the first column plus the second column minus the third column
+
+93
+07:49.220 --> 07:52.090
+equals zero all right.
+
+94
+07:52.100 --> 07:53.270
+So now let's move on.
+
+95
+07:53.270 --> 07:59.350
+So now we shift this matrix by eleven and this is basically where I got stuck and switch to matlab.
+
+96
+07:59.360 --> 08:04.570
+So it turns out that eigenvector is nineteen forty one and thirty six.
+
+97
+08:04.580 --> 08:10.430
+So if you figured out this I can vector on your own without using a computer then good for you you are
+
+98
+08:10.460 --> 08:14.960
+a better or at least more patient mathematician than I am.
+
+99
+08:15.200 --> 08:19.210
+And then we get to the third eigenvalue which was minus one.
+
+100
+08:19.220 --> 08:21.130
+So now that becomes plus one.
+
+101
+08:21.230 --> 08:26.390
+And here is that shifted matrix and this one you should be able to solve on your own.
+
+102
+08:26.480 --> 08:28.810
+In fact it's even easier than it looks.
+
+103
+08:28.820 --> 08:35.930
+And if you need a hint before I show the answer then the hint is just consider that this third column
+
+104
+08:36.020 --> 08:42.340
+is actually pretty useless if you get rid of this third column it becomes really easy to find the 
+
+105
+08:42.380 --> 08:46.520
+eigenvector in this shifted matrices null space.
+
+106
+08:46.790 --> 08:52.400
+So in fact it's one minus one and then zero you just set the third element to be zero.
+
+107
+08:52.670 --> 08:59.810
+So that leads us to the big picture overview of the eigendecomposition of this three by three singular
+
+108
+08:59.810 --> 09:06.130
+matrix rank 2 matrix we have eigenvalues 0 minus 11 and minus 1.
+
+109
+09:06.200 --> 09:09.200
+And these are the corresponding eigenvectors.
+
+110
+09:09.200 --> 09:12.430
+And notice I've written them as row vectors and then transpose.
+
+111
+09:12.430 --> 09:19.160
+So these are still column vectors we generally always think about eigenvectors as column vectors and
+
+112
+09:19.160 --> 09:25.640
+you will learn more about why that is the case in the video on diagonalization, which is coming up soon.
